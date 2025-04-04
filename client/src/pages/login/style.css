@@ -1,0 +1,140 @@
+/* Fullscreen Centered Layout */
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1588286840104-8957ba764b61') no-repeat center center/cover;
+}
+
+/* LuxuryX Header */
+.login-header {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+}
+
+.luxuryx-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFD700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.luxuryx-title:hover {
+    color: #E6C200;
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Title & Subtitle */
+.login-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #222;
+    color: #fff;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    background-color: #FFD700;
+    color: #222;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #E6C200;
+}
+
+/* Error Messages */
+.error-message {
+    font-size: 12px;
+    color: #ff4d4d;
+    margin-top: 5px;
+}
+
+/* Signup & Forgot Password Links */
+.signup-link {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signup-link a, .forgot-password-link {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.signup-link a:hover, .forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Trusted Brands (Mini Version) */
+.trusted-brands-login {
+    margin-top: 20px;
+}
+
+.trusted-brands-login h3 {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.trusted-brands-login .brand-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.trusted-brands-login .brand-logos img {
+    width: 60px;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+.trusted-brands-login .brand-logos img:hover {
+    filter: none;
+}

@@ -1,0 +1,177 @@
+/* ====== General Styles ====== */
+.account-container {
+    max-width: 700px; /* Increased for better spacing */
+    margin: 50px auto;
+    padding: 40px;
+    background: #1a1a1a; /* Darker background for premium feel */
+    border-radius: 12px;
+    box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.1);
+    font-family: "Arial", sans-serif;
+    color: #f5f5f5; /* Light text for readability */
+    width: 90vw; /* Takes almost full width */
+    min-height: 80vh; /* Adjust height for better usability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ====== Title ====== */
+.account-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* ====== Form Styles ====== */
+.account-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.account-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d1d1d1;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    padding: 14px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: #2b2b2b;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.input-field:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+/* ====== Button Styles ====== */
+.update-button {
+    background: linear-gradient(135deg, #00aaff, #0066ff);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.update-button:hover {
+    background: linear-gradient(135deg, #0066ff, #0044cc);
+}
+
+/* ====== Disabled Button (Premium Look) ====== */
+/* ====== Disabled Button (Highly Distinct) ====== */
+.update-button:disabled {
+    background: repeating-linear-gradient(
+        135deg,
+        #333 0px,
+        #333 10px,
+        #3a3a3a 10px,
+        #3a3a3a 20px
+    ); /* Subtle diagonal stripes */
+    color: #999; /* Faded text */
+    opacity: 0.5; /* Makes it feel inactive */
+    cursor: not-allowed;
+    border: 2px dashed #ff4444; /* Red-tinted dashed border */
+    text-shadow: none; /* Removes any hover effects */
+    box-shadow: none; /* No interactivity */
+}
+
+/* ====== Disabled Input (Clearly Different) ====== */
+.input-field:disabled {
+    background: #222; /* Darker background to indicate inactiveness */
+    color: #888; /* Faded text to show it's non-editable */
+    border: 2px dashed #555; /* Dotted border for clear differentiation */
+    cursor: not-allowed;
+    opacity: 0.7; /* Slightly faded */
+    box-shadow: none; /* No focus effect */
+}
+
+
+
+
+/* ====== Success & Error Messages ====== */
+.success-message {
+    color: #00ff99;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: #ff4444;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ====== Full-Width Responsive View ====== */
+@media screen and (max-width: 768px) {
+    .account-container {
+        width: 95vw; /* Takes almost full screen on mobile */
+        padding: 20px;
+    }
+
+    .input-field {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .update-button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+/* ====== Update Password Button ====== */
+.update-password-button {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.update-password-button:hover {
+    background: linear-gradient(135deg, #cc0000, #990000);
+}
+
+/* ====== Redirect Message Styling ====== */
+.redirect-message {
+    color: #ffcc00; /* Yellow for visibility */
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation for smooth appearance */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+

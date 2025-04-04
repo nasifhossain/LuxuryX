@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Back Button */
+.back {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffcc00;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.back:hover {
+    background: rgba(255, 204, 0, 0.2);
+}
+
+/* Back Arrow Icon */
+.back::before {
+    content: "←"; /* Unicode Left Arrow */
+    font-size: 2.3rem;
+}
+
+/* 🔥 Product & Recipe Details Container */
+.productDetails, .recipe-details-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+/* 🖼 Image Gallery */
+.imageGallery, .recipe-image {
+    flex: 1;
+    text-align: center;
+}
+
+.mainImage, .recipe-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.thumbnailContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    transform: scale(1.1);
+    border: 2px solid #ffcc00;
+}
+
+/* 📄 Product Info & Recipe Details */
+.productInfo, .recipe-details {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.productInfo h3, .recipe-details h2 {
+    font-size: 1.8rem;
+    color: #ffcc00;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: #ff4d00;
+}
+
+/* 🛒 Add to Cart Button */
+button {
+    background: #ffcc00;
+    color: #121212;
+    padding: 12px 16px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+/* 📌 Recommendation Section */
+.recommendation {
+    margin: 2rem auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.recommendation-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #ffcc00 transparent;
+}
+
+.recommendation-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    min-width: 180px;
+}
+
+.recommendation-card img {
+    width: 100%;
+    max-width: 160px;
+    border-radius: 8px;
+}
+
+.recommendation-card p {
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.recommendation-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 📝 Reviews Section */
+.reviewsSection {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.reviewCard {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.reviewerName {
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #ff4d00;
+}
+
+.comment {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* 🌀 Loading & Error Messages */
+.loading, .error {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #ffcc00;
+}

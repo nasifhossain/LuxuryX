@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Fix */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 15px 20px;
+    z-index: 1000; /* Ensures it stays above content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Reset Password Page Fix */
+.reset-password-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Applied only to this wrapper, not global body */
+    width: 100%;
+}
+
+/* Reset Password Container - Modern Glassmorphism */
+.reset-password-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form */
+.reset-password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* Input Fields */
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Error Messages */
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* Success Messages */
+.success-message {
+    color: #27ae60;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* Buttons */
+.reset-password-btn {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.reset-password-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #0099ff);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Error Page */
+.error-page {
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.error-text {
+    color: #ff4444;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Back Link */
+.back-link {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .reset-password-container {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* Ensuring Global Styles Stay Untouched */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #00d4ff;
+    --error-color: #ff4d4d;
+    --success-color: #27ae60;
+}
