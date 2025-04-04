@@ -8,7 +8,7 @@ export default defineConfig({
     port: process.env.PORT || 5173, // Use PORT from environment, fallback to 5173
     proxy: {
       '/api': {
-        target: 'http://localhost:3000', // Backend server
+        target: 'https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app', // Backend server
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, '') // Optional: Rewrite API path

@@ -10,7 +10,7 @@ const userRoute = require('./api/routes/user');
 const checkUsernameRoute = require('./api/routes/checkUsername');
 const cartRoute = require('./api/routes/cart');
 // Enable CORS for all requests
-app.use(cors());
+app.use(cors(['https://luxuryx-nasifs-projects-9e4adf21.vercel.app/']));
 
 // OR, if you want to allow only specific origins:
 // app.use(cors({

@@ -18,7 +18,7 @@ function MyAccount() {
         setMessage("");
         setRedirectMessage("");
 
-        axios.put(`http://localhost:3000/user/${username}`, {
+        axios.put(`https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/user/${username}`, {
             email: data.email,
             phone: data.phone,
             name: data.name,
@@ -53,7 +53,7 @@ function MyAccount() {
         }
 
         // Fetch user details
-        axios.get(`http://localhost:3000/user/${username}`, {
+        axios.get(`https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/user/${username}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },

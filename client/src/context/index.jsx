@@ -15,7 +15,7 @@ function ShopingCartProvider({ children }) {
         if (token&& token.length) {
             // Add item to the cart in the backend
             axios.post(
-                "http://localhost:3000/cart",
+                "https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/cart",
                 {
                     username: localStorage.getItem("username").toString(),
                     idx: data.id,
@@ -67,7 +67,7 @@ function ShopingCartProvider({ children }) {
     // useEffect to fetch product details for items in indexItems
     // useEffect(() => {
     //     if (indexItems.length <= 0) {
-    //         axios.get("http://localhost:3000/cart", {
+    //         axios.get("https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/cart", {
     //             params: {username:localStorage.getItem("username")}
     //         }, {
     //             headers: { authorisation: `Bearer ${localStorage.getItem('token')}` }
@@ -122,7 +122,7 @@ function ShopingCartProvider({ children }) {
         }
         try {
             // Make a request to delete the item from the cart
-            const response = await axios.delete(`http://localhost:3000/cart/${idx}`, {
+            const response = await axios.delete(`https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/cart/${idx}`, {
                 params: { username },  // Pass username as query parameter
             });
 
@@ -137,7 +137,7 @@ function ShopingCartProvider({ children }) {
 
     async function updateCart(nummy, id) {
 
-        axios.put(`http://localhost:3000/cart/${id}`, {
+        axios.put(`https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/cart/${id}`, {
             username: localStorage.getItem('username'),
             quantity: nummy
         }).then(res => {

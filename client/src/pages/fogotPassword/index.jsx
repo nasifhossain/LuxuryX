@@ -11,7 +11,7 @@ function ForgotPassword() {
 
     const onSubmit = async (data) => {
         try {
-            const res = await axios.post('http://localhost:3000/user/forgotPassword', {
+            const res = await axios.post('https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/user/forgotPassword', {
                 username:data.username
             });
 

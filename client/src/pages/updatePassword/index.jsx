@@ -14,7 +14,7 @@ function UpdatePassword() {
         setError(""); // Reset error before request
         setMessage(""); // Reset message before request
 
-        axios.put(`http://localhost:3000/user/updatePassword/${username}`, {
+        axios.put(`https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/user/updatePassword/${username}`, {
             oldPassword: data.oldPassword,
             newPassword: data.newPassword,
         }, {

@@ -22,7 +22,7 @@ function ResetPassword() {
     const confirmPassword = watch("confirmPassword", ""); 
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/user/reset-password/${id}/${token}`)
+        axios.get(`https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/user/reset-password/${id}/${token}`)
             .then(res => {
                 console.log(res.data.message);
                 setErrorMessage('');
@@ -43,7 +43,7 @@ function ResetPassword() {
     const onSubmit = async (data) => {
         if (passwordMatchError) return; 
 
-        axios.put(`http://localhost:3000/user/reset-password/${id}/${token}`,{
+        axios.put(`https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/user/reset-password/${id}/${token}`,{
             password: data.password
         }).then(res => {
             alert("✅ Password Reset Successful!");

@@ -16,7 +16,7 @@ function LoginPage() {
         setErrorResponse("");
 
         try {
-            const res = await axios.post('http://localhost:3000/user/login', {
+            const res = await axios.post('https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/user/login', {
                 username: data.username,
                 password: data.password,
             });
@@ -32,7 +32,7 @@ function LoginPage() {
 
             if (cart.length > 0) {
                 await Promise.all(cart.map(item =>
-                    axios.post("http://localhost:3000/cart", {
+                    axios.post("https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/cart", {
                         username,
                         idx: item.idx,
                         title: item.title,
