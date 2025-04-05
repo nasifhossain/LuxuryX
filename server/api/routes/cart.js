@@ -21,7 +21,7 @@ router.post("/", checkAuth, async (req, res, next) => {
             if (itemIndex > -1) {
                 cart.items[itemIndex].quantity += quantity; // Increase the quantity of the item
             } else {
-                cart.items.push({ idx, quantity: 1,title,thumbnail,price }); // Add new item to cart
+                cart.items.push({ idx, quantity: quantity,title,thumbnail,price }); // Add new item to cart
             }
 
             await cart.save(); // Save the cart after modification

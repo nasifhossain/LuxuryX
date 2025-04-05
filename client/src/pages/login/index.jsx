@@ -38,7 +38,7 @@ function LoginPage() {
                         title: item.title,
                         thumbnail: item.thumbnail,
                         price: item.price,
-                        quantity: item.quantity || 1, // default quantity
+                        quantity: item.quantity, // default quantity
                     }, {
                         headers: {
                             authorization: `Bearer ${token}`
