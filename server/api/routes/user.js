@@ -123,7 +123,7 @@ async function sendResetEmail(email, link) {
     };
 
     const apiKey = process.env.apiKey;
-    
+
     try {
         await axios.post(url, emailData, {
             headers: {

@@ -9,7 +9,7 @@ export default defineConfig({
     port: process.env.PORT || 5173,
     proxy: {
       '/api': {
-        target: 'https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app',
+        target: 'https://luxury-x.vercel.app',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, '')

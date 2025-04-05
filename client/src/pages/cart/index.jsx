@@ -15,7 +15,7 @@ function Cart() {
         if (username) {
             setLoading(true);
             axios
-                .get("https://luxury-x-git-main-nasifs-projects-9e4adf21.vercel.app/cart", {
+                .get("https://luxury-x.vercel.app/cart", {
                     params: { username },
                 })
                 .then((result) => {
