@@ -123,7 +123,7 @@ async function sendResetEmail(email, link) {
     };
 
     const apiKey = process.env.apiKey;
-
+    
     try {
         await axios.post(url, emailData, {
             headers: {
@@ -234,7 +234,7 @@ router.post('/forgotPassword', async (req, res, next) => {
 
         const secret = JWT_Secret + user.password;
         const token = jwt.sign({ email: user.email, id: user._id }, secret, { expiresIn: "10m" });
-        const link = `http://localhost:5173/reset-password/${user._id}/${token}`;
+        const link = `https://noluxuryx.netlify.app/reset-password/${user._id}/${token}`;
         console.log(link);
         const email = user.email.trim();
         console.log(email);
