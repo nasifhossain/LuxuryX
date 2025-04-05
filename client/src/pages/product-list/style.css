@@ -1,4 +1,14 @@
-/* General Reset */
+/* CSS VARIABLES FOR EASY CUSTOMIZATION */
+:root {
+    --bg-dark: #181818;
+    --card-dark: #242424;
+    --header-dark: #222;
+    --highlight: #FFD700;
+    --text-light: #E0E0E0;
+    --error-red: #FF3B3B;
+}
+
+/* GENERAL RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,54 +16,74 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* BODY BACKGROUND */
+/* BODY STYLING */
 body {
-    background-color: #181818; /* Dark Premium Background */
-    color: #E0E0E0; /* Light text for readability */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
 }
 
-/* HEADER STYLING */
+/* HEADER */
 .head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
-    background-color: #222; /* Deep Dark Grey */
+    background-color: var(--header-dark);
     color: white;
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
     width: 100%;
     gap: 10px;
+    position: relative;
 }
 
-/* WEBSITE TITLE */
+/* CENTERED TITLE */
 #title {
     font-size: 26px;
     font-weight: bold;
-    color: #FFD700; /* Gold */
+    color: var(--highlight);
     text-align: center;
-    flex-grow: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* HEADER BUTTONS CONTAINER */
+/* HEADER BUTTONS */
 .head-buttons {
     display: flex;
-    gap: 15px; /* Space between buttons */
+    gap: 15px;
+    z-index: 1;
 }
 
-/* PRODUCT LIST GRID */
+/* BUTTON STYLE */
+.head-buttons button {
+    background-color: var(--highlight);
+    color: var(--bg-dark);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.head-buttons button:hover {
+    background-color: #e6c200;
+}
+
+/* PRODUCT CONTAINER */
 .productContainer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px; /* Proper spacing between rows and columns */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    gap: 30px;
     justify-content: center;
-    padding: 50px 10px;
-    max-width: 95%;
+    padding: 50px 15px;
+    max-width: 1200px;
     margin: auto;
 }
 
 /* PRODUCT CARD */
 .productCard {
-    background-color: #242424; /* Darker Card */
+    background-color: var(--card-dark);
     border-radius: 14px;
     box-shadow: 0px 5px 12px rgba(255, 255, 255, 0.1);
     text-align: center;
@@ -62,15 +92,21 @@ body {
     flex-direction: column;
     align-items: center;
     border: 1px solid #444;
-    height: 400px; /* Adjusted height */
+    height: 100%;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.productCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* PRODUCT IMAGE */
 .productCard img {
     width: 100%;
-    height: 250px;
-    object-fit: contain; /* Proper fit */
+    max-height: 180px;
+    object-fit: contain;
     border-radius: 10px;
     background-color: #FFF;
     padding: 12px;
@@ -80,27 +116,51 @@ body {
 
 /* ERROR MESSAGE */
 .error-message {
-    color: #FF3B3B; /* Red for errors */
+    color: var(--error-red);
     font-size: 14px;
     margin-top: 10px;
     text-align: center;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 1200px) {
+/* RESPONSIVE STYLING */
+
+/* 3 columns for tablets and mobile */
+@media (max-width: 1024px) {
     .productContainer {
         grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 40px 10px;
+    }
+
+    #title {
+        font-size: 22px;
+    }
+
+    .productCard {
+        padding: 16px;
+    }
+
+    .productCard img {
+        max-height: 150px;
     }
 }
 
-@media (max-width: 900px) {
-    .productContainer {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* Smaller font and tighter layout for small screens if needed */
 @media (max-width: 600px) {
-    .productContainer {
-        grid-template-columns: repeat(1, 1fr);
+    .productCard {
+        padding: 14px;
+    }
+
+    .productCard img {
+        max-height: 130px;
+    }
+
+    .head-buttons button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    #title {
+        font-size: 20px;
     }
 }
