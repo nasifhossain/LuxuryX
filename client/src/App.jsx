@@ -12,7 +12,6 @@ import ResetPassword from './pages/reset-password'
 import Home from './pages/home'
 import MyAccount from './pages/myaccount'
 import UpdatePassword from './pages/updatePassword'
-import './App.css'
 
 function App() {
 

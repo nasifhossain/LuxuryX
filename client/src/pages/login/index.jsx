@@ -1,5 +1,4 @@
 import { useForm } from 'react-hook-form';
-import './style.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
